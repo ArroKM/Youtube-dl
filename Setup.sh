@@ -38,4 +38,3 @@ echo $cyan"Terinstall..."
 sleep 2
 clear
 echo $purple"By AsecC-eror404"
-sleep2
