@@ -1,0 +1,93 @@
+#!/data/data/com.termux/files/usr/bin/sh
+#
+clear
+biruu='\e[1;34m'
+green='\e[0;23m'
+purple='\e[1;35m'
+cyann='\e[1;36m'
+merahh='\e[1;31m'
+kuningg='\e[1;33m'
+lgreen='\e[1;34m'
+brown='\e[0;33m'
+white='\e[1;37m'
+go='\e[1;30m'
+w='\e[97m'         #putih
+g='\033[1;92m'     #hijau
+merah='\033[1;91m'     #merah
+biru='\033[1;94m'     #biru
+uline='\e[1;4m'    #bergarisbawah
+cyan='\033[1;36m'     #cyan
+red='\033[1;31m'
+kuning='\033[1;33m'     #kuning
+u='\033[1;35m'     #ungu
+re='\033[0m'       #putih
+go='\033[1;30m'
+echo $merah" _  _  _____  __  __  ____  __  __  ____  ____"
+echo $kuning"( \/ )(  _  )(  )(  )(_  _)(  )(  )(  _ \( ___)"
+echo $cyan" \  /  )(_)(  )(__)(   )(   )(__)(  ) _ < )__)"
+echo $biru" (__) (_____)(______) (__) (______)(____/(____)"
+echo $kuning" [+] Author  : "$go"AsecC|~|eror404  "$kuning" _____  _____"
+echo $kuning" [+] Team    : "$go"HaxID            "$merah"|     \|     |_"
+echo $kuning" [+] Youtube : "$go"AsecC eror404    "$biru"|  --  |       |"
+echo $kuning"                                "$cyan"|_____/|_______|"
+echo ""
+echo $kuning"["$merah"1"$kuning"] "$cyan"MP3"
+echo $kuning"["$merah"2"$kuning"] "$cyan"360p"
+echo $kuning"["$merah"3"$kuning"] "$cyan"480p"
+echo $kuning"["$merah"4"$kuning"] "$cyan"720p"
+echo $kuning"["$merah"5"$kuning"] "$cyan"1080p"
+
+command='-no-mtime -o /data/data/com.termux/files/home/storage/shared/Youtube/%(title)s.%(ext)s -f'
+echo $cyan
+read -p "Enter Choice : " option;
+
+if [ "$option" -eq "1" ]
+then
+    echo "$command 140" > ~/.config/youtube-dl/config
+    echo $kuning"[*] Downloading Music"
+    sleep 2
+    echo $go""
+    youtube-dl $1
+    echo $kuning"[*] Saved = /sdcard/Youtube"
+    sleep 5
+
+elif [ "$option" -eq "2" ]
+then
+    echo "$command \"best[height<=360]\"" > ~/.config/youtube-dl/config
+    echo $kuning"[*] Downloading Video 360p"
+    sleep 2
+    echo $go""
+    youtube-dl $1
+    echo $kuning"[*] Saved = /sdcard/Youtube"
+    sleep 5
+
+elif [ "$option" -eq "3" ]
+then
+    echo "$command \"best[height<=480]\"" > ~/.config/youtube-dl/config
+    echo $kuning"[*] Downloading Video 480p"
+    sleep 2
+    echo $go""
+    youtube-dl $1
+    echo $kuning"[*] Saved = /sdcard/Youtube"
+    sleep 5
+
+elif [ "$option" -eq "4" ]
+then
+    echo "$command \"best[height<=720]\"" > ~/.config/youtube-dl/config
+    echo $kuning"[*] Downloading Video 720p"
+    sleep 2
+    echo $go""
+    youtube-dl $1
+    echo $kuning"[*] Saved = /sdcard/Youtube"
+    sleep 5
+
+elif [ "$option" -eq "5" ]
+then
+    echo "$command \"best[height<=1080]\"" > ~/.config/youtube-dl/config
+    echo $kuning"[*] Downloading Video 1080p"
+    sleep 2
+    echo $go""
+    youtube-dl $1
+    echo $kuning"[*] Saved = /sdcard/Youtube"
+    sleep 5
+fi
