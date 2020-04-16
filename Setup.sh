@@ -28,7 +28,7 @@ mkdir /data/data/com.termux/files/home/storage/shared/Youtube
 clear
 cp config ~/.config/youtube-dl
 mkdir ~/bin
-cp termux-url-opener $HOME/bin
+cp termux-url-opener /data/data/com.termux/files/home/bin
 clear
 cd $HOME
 rm -rf Youtube-dl
