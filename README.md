@@ -8,7 +8,7 @@ Download video dan music youtube jadi lebih mudah.
 <h3>Installing</h3>
 
 ```java
-$ git clone https://github.com/muhammadfathul/Youtube-dl
+$ git clone https://github.com/ArroKM/Youtube-dl
 $ cd Youtube-dl
 $ bash Setup.sh
 ```
